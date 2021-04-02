@@ -13,7 +13,7 @@ export async function getStaticProps() {
     }
   }
 }
-
+//git clone "http://pchalaris@gerrit.10.82.5.96.xip.io/a/slg-cloud-apps/rolls"
 
 export default function Home({ allPostsData }) {
   return (
@@ -23,6 +23,9 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>Hi my name is Shockrates</p>
+        <Link href="/about">
+          <a>Check out some info about me!</a>
+        </Link>
         <p>
           (This is a sample website - you’ll be building a site like this on{' '}
           <Link href="https://nextjs.org/learn">
@@ -31,8 +34,8 @@ export default function Home({ allPostsData }) {
           .)
         </p>
         <Link href="/posts/first-post">
-            <a>Check my first post</a>
-          </Link>
+          <a>Check my first post</a>
+        </Link>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
@@ -46,7 +49,7 @@ export default function Home({ allPostsData }) {
               {id}
               <br />
               <small className={utilStyles.lighText}>
-              <Date dateString={date}/>
+                <Date dateString={date} />
               </small>
             </li>
           ))}
@@ -58,7 +61,7 @@ export default function Home({ allPostsData }) {
 }
 
 
-const handleClick = (e) =>  {
+const handleClick = (e) => {
   alert('Free pizza!');
   console.log(e);
 }
